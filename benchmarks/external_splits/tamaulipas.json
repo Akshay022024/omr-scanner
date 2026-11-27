@@ -1,0 +1,6 @@
+{
+ "dataset": "Tamaulipas MCQ Exam Image Dataset (doi:10.17632/djmynjwjpy.2, CC BY 4.0)",
+ "rule": "split by school, alternating in sorted order; fixed before any calibration or tuning",
+ "dev": ["School001", "School011", "School021", "School031"],
+ "test": ["School006", "School016", "School026", "School036"]
+}

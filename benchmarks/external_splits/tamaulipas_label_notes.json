@@ -1,0 +1,17 @@
+{
+ "note": "Suspected label errors found by inspecting error crops. Labels are NOT edited; these items still count as errors and are also reported separately.",
+ "suspected": [
+  {
+   "sheet": "School031_Grade10_File0010",
+   "field": "id_2",
+   "split": "dev",
+   "note": "label says 7, but 6 is solidly filled and 7 is only a faint erased-looking residue"
+  },
+  {
+   "sheet": "School006_Grade12_File0011",
+   "field": "q6",
+   "split": "test",
+   "note": "label says D, but B is solidly filled and D is faint/erased-looking; engine flagged it ambiguous"
+  }
+ ]
+}

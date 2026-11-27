@@ -1,0 +1,14 @@
+﻿.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/
+benchmarks/data/
+frontend/node_modules/
+frontend/dist/
+scratch/
+
+# Third-party sheet artwork, not redistributable (keep local; regenerate PNG with tools/template_calibration/render.py)
+templates/sheet80_v2/source.pdf
+templates/sheet80_v2/template_200dpi.png
+

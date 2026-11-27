@@ -1,0 +1,522 @@
+{
+ "schema": "omr-external/1",
+ "dataset": "tamaulipas",
+ "split": "dev",
+ "citation": "Tamaulipas MCQ Exam Image Dataset, Universidad Politecnica de Victoria, Mendeley Data v2, doi:10.17632/djmynjwjpy.2, CC BY 4.0",
+ "generated_at": "2026-11-24T10:51:57Z",
+ "engine_version": "0.1.0",
+ "template_id": "tamaulipas_90",
+ "engine_overrides": {
+  "ink_dark_lo": 0.12,
+  "ink_dark_hi": 0.4,
+  "ink_close_px": 5,
+  "min_threshold": 0.25,
+  "max_threshold": 0.45
+ },
+ "schools": [
+  "School001",
+  "School011",
+  "School021",
+  "School031"
+ ],
+ "metrics": {
+  "sheets": 96,
+  "questions": 8640,
+  "question_accuracy_strict": 0.9989583333333333,
+  "question_accuracy_lenient": 0.9996527777777777,
+  "silent_error_rate": 0.00034722222222222224,
+  "question_review_rate": 0.0025462962962962965,
+  "blank_precision": 0.952,
+  "blank_recall": 1.0,
+  "multiple_precision": 0.6666666666666666,
+  "multiple_recall": 1.0,
+  "labelled_blank": 119,
+  "labelled_multiple": 6,
+  "id_exact": 0.9583333333333334,
+  "sheet_exact": 0.90625,
+  "sheets_needs_review": 0.23958333333333334,
+  "failure_rate": 0.0,
+  "avg_flags_per_sheet": 0.4479166666666667,
+  "errors_by_kind": {
+   "id:missed_fill": 7,
+   "missed_fill": 6,
+   "false_multiple": 3,
+   "id:wrong_option": 1,
+   "id:false_multiple": 1
+  },
+  "suspected_label_errors": 1,
+  "question_accuracy_strict_excl_suspected_labels": 0.9989583333333333,
+  "latency_ms_p50": 763.533649999772,
+  "latency_ms_p95": 810.566825000933,
+  "load_ms_mean": 412.28231354165246
+ },
+ "per_school": {
+  "School001": {
+   "sheets": 24,
+   "questions": 2160,
+   "question_accuracy_strict": 0.9990740740740741,
+   "question_accuracy_lenient": 0.999537037037037,
+   "silent_error_rate": 0.000462962962962963,
+   "question_review_rate": 0.0023148148148148147,
+   "blank_precision": 0.9,
+   "blank_recall": 1.0,
+   "multiple_precision": 1.0,
+   "multiple_recall": 1.0,
+   "labelled_blank": 18,
+   "labelled_multiple": 1,
+   "id_exact": 0.9583333333333334,
+   "sheet_exact": 0.875,
+   "sheets_needs_review": 0.2916666666666667,
+   "failure_rate": 0.0,
+   "avg_flags_per_sheet": 0.5,
+   "errors_by_kind": {
+    "id:missed_fill": 2,
+    "missed_fill": 2
+   },
+   "suspected_label_errors": 0,
+   "question_accuracy_strict_excl_suspected_labels": 0.9990740740740741,
+   "latency_ms_p50": 771.114299999681,
+   "latency_ms_p95": 840.8758450007554,
+   "load_ms_mean": 413.54740416674457
+  },
+  "School011": {
+   "sheets": 24,
+   "questions": 2160,
+   "question_accuracy_strict": 1.0,
+   "question_accuracy_lenient": 1.0,
+   "silent_error_rate": 0.0,
+   "question_review_rate": 0.001851851851851852,
+   "blank_precision": 1.0,
+   "blank_recall": 1.0,
+   "multiple_precision": 1.0,
+   "multiple_recall": 1.0,
+   "labelled_blank": 74,
+   "labelled_multiple": 1,
+   "id_exact": 1.0,
+   "sheet_exact": 1.0,
+   "sheets_needs_review": 0.16666666666666666,
+   "failure_rate": 0.0,
+   "avg_flags_per_sheet": 0.20833333333333334,
+   "errors_by_kind": {},
+   "suspected_label_errors": 0,
+   "question_accuracy_strict_excl_suspected_labels": 1.0,
+   "latency_ms_p50": 765.1917499988485,
+   "latency_ms_p95": 827.3246599996127,
+   "load_ms_mean": 424.19665416665947
+  },
+  "School021": {
+   "sheets": 24,
+   "questions": 2160,
+   "question_accuracy_strict": 1.0,
+   "question_accuracy_lenient": 1.0,
+   "silent_error_rate": 0.0,
+   "question_review_rate": 0.000462962962962963,
+   "blank_precision": 1.0,
+   "blank_recall": 1.0,
+   "multiple_precision": 1.0,
+   "multiple_recall": 1.0,
+   "labelled_blank": 4,
+   "labelled_multiple": 3,
+   "id_exact": 1.0,
+   "sheet_exact": 1.0,
+   "sheets_needs_review": 0.16666666666666666,
+   "failure_rate": 0.0,
+   "avg_flags_per_sheet": 0.16666666666666666,
+   "errors_by_kind": {},
+   "suspected_label_errors": 0,
+   "question_accuracy_strict_excl_suspected_labels": 1.0,
+   "latency_ms_p50": 756.2261000002763,
+   "latency_ms_p95": 782.7870349998193,
+   "load_ms_mean": 410.58851249992284
+  },
+  "School031": {
+   "sheets": 24,
+   "questions": 2160,
+   "question_accuracy_strict": 0.9967592592592592,
+   "question_accuracy_lenient": 0.9990740740740741,
+   "silent_error_rate": 0.000925925925925926,
+   "question_review_rate": 0.005555555555555556,
+   "blank_precision": 0.8518518518518519,
+   "blank_recall": 1.0,
+   "multiple_precision": 0.25,
+   "multiple_recall": 1.0,
+   "labelled_blank": 23,
+   "labelled_multiple": 1,
+   "id_exact": 0.875,
+   "sheet_exact": 0.75,
+   "sheets_needs_review": 0.3333333333333333,
+   "failure_rate": 0.0,
+   "avg_flags_per_sheet": 0.9166666666666666,
+   "errors_by_kind": {
+    "id:missed_fill": 5,
+    "missed_fill": 4,
+    "false_multiple": 3,
+    "id:wrong_option": 1,
+    "id:false_multiple": 1
+   },
+   "suspected_label_errors": 1,
+   "question_accuracy_strict_excl_suspected_labels": 0.9967592592592592,
+   "latency_ms_p50": 758.6821000013515,
+   "latency_ms_p95": 790.8913349987415,
+   "load_ms_mean": 400.796683333283
+  }
+ },
+ "errors": [
+  {
+   "sheet": "School001_Grade10_File0002",
+   "field": "id_2",
+   "expected": "2",
+   "got": "",
+   "state": "blank",
+   "kind": "id:missed_fill",
+   "scores": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.2444,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School001_Grade10_File0002",
+   "field": "id_4",
+   "expected": "1",
+   "got": "",
+   "state": "ambiguous",
+   "kind": "id:missed_fill",
+   "scores": {
+    "0": 0.0,
+    "1": 0.3107,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School001_Grade12_File0011",
+   "field": "q79",
+   "question": 79,
+   "expected": "A",
+   "got": "(blank)",
+   "state": "blank",
+   "kind": "missed_fill",
+   "ambiguous": false,
+   "scores": {
+    "A": 0.1925,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School001_Grade12_File0012",
+   "field": "q86",
+   "question": 86,
+   "expected": "B",
+   "got": "(blank)",
+   "state": "ambiguous",
+   "kind": "missed_fill",
+   "ambiguous": true,
+   "scores": {
+    "A": 0.0,
+    "B": 0.2691,
+    "C": 0.0,
+    "D": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0001",
+   "field": "q62",
+   "question": 62,
+   "expected": "D",
+   "got": "(blank)",
+   "state": "ambiguous",
+   "kind": "missed_fill",
+   "ambiguous": true,
+   "scores": {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.3273
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0002",
+   "field": "id_2",
+   "expected": "6",
+   "got": "",
+   "state": "ambiguous",
+   "kind": "id:missed_fill",
+   "scores": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.2696,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0002",
+   "field": "id_3",
+   "expected": "8",
+   "got": "",
+   "state": "blank",
+   "kind": "id:missed_fill",
+   "scores": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0788,
+    "9": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0002",
+   "field": "id_4",
+   "expected": "8",
+   "got": "",
+   "state": "blank",
+   "kind": "id:missed_fill",
+   "scores": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0502,
+    "9": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0002",
+   "field": "q21",
+   "question": 21,
+   "expected": "B",
+   "got": "(blank)",
+   "state": "ambiguous",
+   "kind": "missed_fill",
+   "ambiguous": true,
+   "scores": {
+    "A": 0.0,
+    "B": 0.2695,
+    "C": 0.0,
+    "D": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0002",
+   "field": "q23",
+   "question": 23,
+   "expected": "A",
+   "got": "(blank)",
+   "state": "ambiguous",
+   "kind": "missed_fill",
+   "ambiguous": true,
+   "scores": {
+    "A": 0.3095,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0002",
+   "field": "q39",
+   "question": 39,
+   "expected": "A",
+   "got": "(blank)",
+   "state": "ambiguous",
+   "kind": "missed_fill",
+   "ambiguous": true,
+   "scores": {
+    "A": 0.3246,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0003",
+   "field": "q78",
+   "question": 78,
+   "expected": "A",
+   "got": "AB",
+   "state": "multiple",
+   "kind": "false_multiple",
+   "ambiguous": false,
+   "scores": {
+    "A": 0.4485,
+    "B": 0.5446,
+    "C": 0.0,
+    "D": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0010",
+   "field": "id_1",
+   "expected": "1",
+   "got": "1",
+   "state": "ambiguous",
+   "kind": "id:wrong_option",
+   "scores": {
+    "0": 0.0,
+    "1": 1.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.3225,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.2892
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0010",
+   "field": "id_2",
+   "expected": "7",
+   "got": "67",
+   "state": "multiple",
+   "kind": "id:false_multiple",
+   "scores": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 1.0,
+    "7": 0.4783,
+    "8": 0.0,
+    "9": 0.0
+   },
+   "suspected_label_error": true
+  },
+  {
+   "sheet": "School031_Grade10_File0010",
+   "field": "q28",
+   "question": 28,
+   "expected": "C",
+   "got": "BC",
+   "state": "ambiguous",
+   "kind": "false_multiple",
+   "ambiguous": true,
+   "scores": {
+    "A": 0.0,
+    "B": 0.4473,
+    "C": 1.0,
+    "D": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0011",
+   "field": "id_2",
+   "expected": "6",
+   "got": "",
+   "state": "ambiguous",
+   "kind": "id:missed_fill",
+   "scores": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.3461,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade10_File0011",
+   "field": "id_4",
+   "expected": "8",
+   "got": "",
+   "state": "blank",
+   "kind": "id:missed_fill",
+   "scores": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0108,
+    "9": 0.0
+   },
+   "suspected_label_error": false
+  },
+  {
+   "sheet": "School031_Grade12_File0003",
+   "field": "q18",
+   "question": 18,
+   "expected": "A",
+   "got": "AD",
+   "state": "multiple",
+   "kind": "false_multiple",
+   "ambiguous": false,
+   "scores": {
+    "A": 1.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.5132
+   },
+   "suspected_label_error": false
+  }
+ ],
+ "suspected_label_errors": [
+  {
+   "sheet": "School031_Grade10_File0010",
+   "field": "id_2",
+   "split": "dev",
+   "note": "label says 7, but 6 is solidly filled and 7 is only a faint erased-looking residue"
+  },
+  {
+   "sheet": "School006_Grade12_File0011",
+   "field": "q6",
+   "split": "test",
+   "note": "label says D, but B is solidly filled and D is faint/erased-looking; engine flagged it ambiguous"
+  }
+ ]
+}

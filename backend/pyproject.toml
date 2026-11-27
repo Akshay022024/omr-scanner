@@ -1,0 +1,15 @@
+[project]
+name = "omr-scanner-backend"
+version = "0.1.0"
+description = "OMR scanner engine (omr_engine) and REST API (app)"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = [".", "tests"]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = [
+    "ignore::DeprecationWarning:pymupdf.*",
+    # fastapi.testclient re-exports starlette's httpx-based client; harmless for the test suite
+    "ignore:Using .httpx. with .starlette.testclient. is deprecated",
+]

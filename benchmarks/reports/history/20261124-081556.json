@@ -1,0 +1,999 @@
+{
+  "schema": "omr-benchmark/1",
+  "generated_at": "2026-11-24T08:15:56Z",
+  "engine_version": "0.1.0",
+  "config": {
+    "n": 20,
+    "seed": 42,
+    "tiers": [
+      "clean",
+      "scan",
+      "photo",
+      "hard"
+    ],
+    "template": "sheet80_v2",
+    "style_mix": {
+      "fill_weights": {
+        "solid": 0.45,
+        "heavy": 0.15,
+        "partial": 0.15,
+        "scribble": 0.15,
+        "overshoot": 0.1
+      },
+      "consistent_student": 0.6,
+      "blank_rate": 0.05,
+      "multiple_rate": 0.02,
+      "distractor_rate": 0.02,
+      "distractor_weights": {
+        "tick": 1.0,
+        "cross": 1.0,
+        "smudge": 1.0
+      },
+      "set_blank_rate": 0.0,
+      "handwriting_prob": 0.85,
+      "signature_prob": 0.8,
+      "stray_marks_max": 2,
+      "pen_kind": null
+    },
+    "engine_config": {
+      "max_side_px": 4000,
+      "pdf_dpi": 200,
+      "max_pdf_pages": 20,
+      "page_detect_max_side": 640,
+      "min_page_area_frac": 0.2,
+      "max_page_area_frac": 0.985,
+      "orientation_scale": 0.125,
+      "presize_ratio": 1.3,
+      "background_scale": 0.125,
+      "background_kernel": 7,
+      "magenta_hue_min": 140,
+      "magenta_hue_max": 179,
+      "magenta_sat_min": 18,
+      "magenta_sat_max": 45,
+      "magenta_noise_k": 6.0,
+      "magenta_val_min": 90,
+      "ink_dark_val_max": 110,
+      "blue_hue_min": 88,
+      "blue_hue_max": 136,
+      "blue_sat_min": 60,
+      "blue_val_max": 245,
+      "ecc_scales": [
+        0.125,
+        0.25
+      ],
+      "ecc_blur_sigmas": [
+        2.0,
+        1.2
+      ],
+      "ecc_iterations": [
+        80,
+        50
+      ],
+      "ecc_eps": 1e-05,
+      "max_corner_shift_frac": 0.1,
+      "orb_trigger_quality": 0.55,
+      "orb_features": 4000,
+      "orb_scale": 0.5,
+      "orb_ratio": 0.8,
+      "orb_match_radius_px": 140.0,
+      "orb_min_inliers": 30,
+      "ransac_reproj_px": 3.0,
+      "anchor_search_px": 8,
+      "anchor_segments_per_edge": 4,
+      "anchor_min_constraints": 6,
+      "anchor_outlier_px": 1.5,
+      "random_seed": 0,
+      "quality_scale": 0.5,
+      "quality_dilate_px": 1,
+      "quality_review": 0.3,
+      "quality_fail": 0.12,
+      "disc_radius_frac": 0.75,
+      "shift_search_px": 4,
+      "min_threshold": 0.3,
+      "max_threshold": 0.55,
+      "min_gap": 0.1,
+      "ambiguity_margin": 0.08,
+      "confidence_scale": 0.3,
+      "flag_blank_answers": false
+    },
+    "real_dir_scored": 0,
+    "warmup_ms": 430.55660000027274,
+    "platform": {
+      "python": "3.12.10",
+      "system": "Windows",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+      "opencv": "5.1.0",
+      "numpy": "2.5.5"
+    },
+    "synth_seconds": 63.71,
+    "wall_seconds": 87.52
+  },
+  "targets": {
+    "question_accuracy": {
+      "clean": 0.999,
+      "scan": 0.995,
+      "photo": 0.98
+    },
+    "latency_p95_ms": 1500.0
+  },
+  "tiers": {
+    "clean": {
+      "n_sheets": 20,
+      "bubble_accuracy": 0.999290780141844,
+      "question_accuracy": 0.996875,
+      "question_accuracy_lenient": 0.9975,
+      "silent_error_rate": 0.0025,
+      "question_review_rate": 0.00125,
+      "questions_total": 1600,
+      "questions_wrong": 5,
+      "roll_exact": 0.95,
+      "paper_set_accuracy": 1.0,
+      "sheet_exact": 0.9,
+      "blank_precision": 0.9528301886792453,
+      "blank_recall": 1.0,
+      "blank_support": 101,
+      "multiple_precision": 1.0,
+      "multiple_recall": 1.0,
+      "multiple_support": 34,
+      "distractor_count": 37,
+      "distractor_false_fill_rate": 0.0,
+      "distractor_flagged_rate": 0.0,
+      "distractor_by_type": {
+        "cross": {
+          "count": 9,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        },
+        "smudge": {
+          "count": 15,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        },
+        "tick": {
+          "count": 13,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        }
+      },
+      "fill_recall_by_style": {
+        "heavy": {
+          "count": 211,
+          "recall": 1.0
+        },
+        "overshoot": {
+          "count": 325,
+          "recall": 1.0
+        },
+        "partial": {
+          "count": 200,
+          "recall": 0.98
+        },
+        "scribble": {
+          "count": 289,
+          "recall": 0.9930795847750865
+        },
+        "solid": {
+          "count": 710,
+          "recall": 1.0
+        }
+      },
+      "review_rate": 0.75,
+      "avg_flags_per_sheet": 1.85,
+      "registration_failure_rate": 0.0,
+      "registration_quality_mean": 0.88059,
+      "registration_quality_min": 0.8305,
+      "latency_ms": {
+        "p50": 194.62374999989152,
+        "p95": 241.696750000051,
+        "mean": 203.33615500001088,
+        "max": 243.90549999998257
+      },
+      "throughput_sheets_per_s": 4.917964540049193,
+      "engine_stage_ms_mean": {
+        "page": 59.885000000000005,
+        "read": 42.22,
+        "register": 99.475,
+        "total": 201.66
+      },
+      "error_breakdown": {
+        "missed_fill": 5,
+        "roll:missed_fill": 1
+      },
+      "error_breakdown_by_style": {
+        "missed_fill|partial": 3,
+        "missed_fill|scribble": 2,
+        "roll:missed_fill|partial": 1
+      }
+    },
+    "scan": {
+      "n_sheets": 20,
+      "bubble_accuracy": 0.9983451536643027,
+      "question_accuracy": 0.991875,
+      "question_accuracy_lenient": 0.995,
+      "silent_error_rate": 0.005,
+      "question_review_rate": 0.00625,
+      "questions_total": 1600,
+      "questions_wrong": 13,
+      "roll_exact": 0.95,
+      "paper_set_accuracy": 1.0,
+      "sheet_exact": 0.9,
+      "blank_precision": 0.8859649122807017,
+      "blank_recall": 1.0,
+      "blank_support": 101,
+      "multiple_precision": 1.0,
+      "multiple_recall": 1.0,
+      "multiple_support": 34,
+      "distractor_count": 37,
+      "distractor_false_fill_rate": 0.0,
+      "distractor_flagged_rate": 0.0,
+      "distractor_by_type": {
+        "cross": {
+          "count": 9,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        },
+        "smudge": {
+          "count": 15,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        },
+        "tick": {
+          "count": 13,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        }
+      },
+      "fill_recall_by_style": {
+        "heavy": {
+          "count": 211,
+          "recall": 1.0
+        },
+        "overshoot": {
+          "count": 325,
+          "recall": 1.0
+        },
+        "partial": {
+          "count": 200,
+          "recall": 0.96
+        },
+        "scribble": {
+          "count": 289,
+          "recall": 0.9792387543252595
+        },
+        "solid": {
+          "count": 710,
+          "recall": 1.0
+        }
+      },
+      "review_rate": 0.8,
+      "avg_flags_per_sheet": 2.25,
+      "registration_failure_rate": 0.0,
+      "registration_quality_mean": 0.7439599999999998,
+      "registration_quality_min": 0.7075,
+      "latency_ms": {
+        "p50": 220.6719499999963,
+        "p95": 270.9989400001632,
+        "mean": 227.20528500005912,
+        "max": 312.7598000000944
+      },
+      "throughput_sheets_per_s": 4.401306069969895,
+      "engine_stage_ms_mean": {
+        "page": 67.73,
+        "read": 40.980000000000004,
+        "register": 116.60500000000002,
+        "total": 225.40500000000003
+      },
+      "error_breakdown": {
+        "missed_fill": 13,
+        "roll:missed_fill": 1
+      },
+      "error_breakdown_by_style": {
+        "missed_fill|partial": 7,
+        "missed_fill|scribble": 6,
+        "roll:missed_fill|partial": 1
+      }
+    },
+    "photo": {
+      "n_sheets": 20,
+      "bubble_accuracy": 0.985224586288416,
+      "question_accuracy": 0.955625,
+      "question_accuracy_lenient": 0.96375,
+      "silent_error_rate": 0.03625,
+      "question_review_rate": 0.0125,
+      "questions_total": 1600,
+      "questions_wrong": 71,
+      "roll_exact": 0.9,
+      "paper_set_accuracy": 0.95,
+      "sheet_exact": 0.8,
+      "blank_precision": 0.7205882352941176,
+      "blank_recall": 0.9702970297029703,
+      "blank_support": 101,
+      "multiple_precision": 1.0,
+      "multiple_recall": 1.0,
+      "multiple_support": 34,
+      "distractor_count": 37,
+      "distractor_false_fill_rate": 0.0,
+      "distractor_flagged_rate": 0.02702702702702703,
+      "distractor_by_type": {
+        "cross": {
+          "count": 9,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        },
+        "smudge": {
+          "count": 15,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        },
+        "tick": {
+          "count": 13,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.07692307692307693
+        }
+      },
+      "fill_recall_by_style": {
+        "heavy": {
+          "count": 211,
+          "recall": 0.7298578199052133
+        },
+        "overshoot": {
+          "count": 325,
+          "recall": 0.9969230769230769
+        },
+        "partial": {
+          "count": 200,
+          "recall": 0.965
+        },
+        "scribble": {
+          "count": 289,
+          "recall": 0.972318339100346
+        },
+        "solid": {
+          "count": 710,
+          "recall": 0.9915492957746479
+        }
+      },
+      "review_rate": 0.9,
+      "avg_flags_per_sheet": 3.05,
+      "registration_failure_rate": 0.0,
+      "registration_quality_mean": 0.66021,
+      "registration_quality_min": 0.2966,
+      "latency_ms": {
+        "p50": 234.47565000014947,
+        "p95": 393.18973000013125,
+        "mean": 266.5456550000272,
+        "max": 723.7332999998216
+      },
+      "throughput_sheets_per_s": 3.751702499145589,
+      "engine_stage_ms_mean": {
+        "page": 71.55,
+        "read": 42.82000000000001,
+        "register": 150.32,
+        "total": 264.76000000000005
+      },
+      "error_breakdown": {
+        "missed_fill": 38,
+        "wrong_option": 30,
+        "roll:wrong_option": 6,
+        "roll:false_multiple": 3,
+        "false_fill": 3,
+        "roll:missed_fill": 2,
+        "set:missed_fill": 1
+      },
+      "error_breakdown_by_style": {
+        "missed_fill|heavy": 27,
+        "wrong_option|heavy": 22,
+        "missed_fill|scribble": 6,
+        "missed_fill|partial": 5,
+        "wrong_option|solid": 5,
+        "roll:wrong_option|heavy": 4,
+        "roll:false_multiple|heavy": 3,
+        "roll:missed_fill|partial": 1,
+        "roll:missed_fill|heavy": 1,
+        "roll:wrong_option|scribble": 1,
+        "roll:wrong_option|solid": 1,
+        "wrong_option|scribble": 1,
+        "wrong_option|partial": 1,
+        "wrong_option|overshoot": 1
+      }
+    },
+    "hard": {
+      "n_sheets": 20,
+      "bubble_accuracy": 0.6774231678486997,
+      "question_accuracy": 0.625,
+      "question_accuracy_lenient": 0.939375,
+      "silent_error_rate": 0.060625,
+      "question_review_rate": 0.02,
+      "questions_total": 1600,
+      "questions_wrong": 600,
+      "roll_exact": 0.55,
+      "paper_set_accuracy": 0.6,
+      "sheet_exact": 0.45,
+      "blank_precision": 0.40939597315436244,
+      "blank_recall": 0.6039603960396039,
+      "blank_support": 101,
+      "multiple_precision": 1.0,
+      "multiple_recall": 0.5882352941176471,
+      "multiple_support": 34,
+      "distractor_count": 26,
+      "distractor_false_fill_rate": 0.0,
+      "distractor_flagged_rate": 0.07692307692307693,
+      "distractor_by_type": {
+        "cross": {
+          "count": 6,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        },
+        "smudge": {
+          "count": 10,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.2
+        },
+        "tick": {
+          "count": 10,
+          "false_fill_rate": 0.0,
+          "flagged_rate": 0.0
+        }
+      },
+      "fill_recall_by_style": {
+        "heavy": {
+          "count": 118,
+          "recall": 0.9322033898305084
+        },
+        "overshoot": {
+          "count": 162,
+          "recall": 0.6790123456790124
+        },
+        "partial": {
+          "count": 105,
+          "recall": 0.6476190476190476
+        },
+        "scribble": {
+          "count": 266,
+          "recall": 0.924812030075188
+        },
+        "solid": {
+          "count": 570,
+          "recall": 0.9491228070175438
+        }
+      },
+      "review_rate": 0.6,
+      "avg_flags_per_sheet": 9.3,
+      "registration_failure_rate": 0.3,
+      "registration_quality_mean": 0.22806,
+      "registration_quality_min": 0.0471,
+      "latency_ms": {
+        "p50": 348.68124999979955,
+        "p95": 857.255634999956,
+        "mean": 479.9398299999666,
+        "max": 873.8432999998622
+      },
+      "throughput_sheets_per_s": 2.083594520588278,
+      "engine_stage_ms_mean": {
+        "page": 62.62000000000002,
+        "read": 41.82,
+        "register": 373.77500000000003,
+        "total": 478.33000000000004
+      },
+      "error_breakdown": {
+        "missed_fill": 87,
+        "wrong_option": 29,
+        "roll:missed_fill": 14,
+        "roll:wrong_option": 11,
+        "registration_failed": 6,
+        "set:missed_fill": 2,
+        "missed_multiple": 2,
+        "false_fill": 2
+      },
+      "error_breakdown_by_style": {
+        "missed_fill|partial": 28,
+        "missed_fill|overshoot": 26,
+        "missed_fill|scribble": 15,
+        "missed_fill|solid": 15,
+        "wrong_option|overshoot": 13,
+        "wrong_option|solid": 9,
+        "roll:missed_fill|partial": 6,
+        "roll:missed_fill|overshoot": 6,
+        "roll:wrong_option|overshoot": 6,
+        "roll:wrong_option|solid": 4,
+        "wrong_option|heavy": 3,
+        "missed_fill|heavy": 3,
+        "wrong_option|partial": 2,
+        "wrong_option|scribble": 2,
+        "roll:missed_fill|scribble": 1
+      }
+    }
+  },
+  "overall": {
+    "n_sheets": 80,
+    "bubble_accuracy": 0.9150709219858156,
+    "question_accuracy": 0.89234375,
+    "question_accuracy_lenient": 0.97390625,
+    "silent_error_rate": 0.02609375,
+    "question_review_rate": 0.01,
+    "questions_total": 6400,
+    "questions_wrong": 689,
+    "roll_exact": 0.8375,
+    "paper_set_accuracy": 0.8875,
+    "sheet_exact": 0.7625,
+    "blank_precision": 0.7148514851485148,
+    "blank_recall": 0.8935643564356436,
+    "blank_support": 404,
+    "multiple_precision": 1.0,
+    "multiple_recall": 0.8970588235294118,
+    "multiple_support": 136,
+    "distractor_count": 137,
+    "distractor_false_fill_rate": 0.0,
+    "distractor_flagged_rate": 0.021897810218978103,
+    "distractor_by_type": {
+      "cross": {
+        "count": 33,
+        "false_fill_rate": 0.0,
+        "flagged_rate": 0.0
+      },
+      "smudge": {
+        "count": 55,
+        "false_fill_rate": 0.0,
+        "flagged_rate": 0.03636363636363636
+      },
+      "tick": {
+        "count": 49,
+        "false_fill_rate": 0.0,
+        "flagged_rate": 0.02040816326530612
+      }
+    },
+    "fill_recall_by_style": {
+      "heavy": {
+        "count": 751,
+        "recall": 0.9134487350199734
+      },
+      "overshoot": {
+        "count": 1137,
+        "recall": 0.9533861037818822
+      },
+      "partial": {
+        "count": 705,
+        "recall": 0.9205673758865248
+      },
+      "scribble": {
+        "count": 1133,
+        "recall": 0.9682259488084731
+      },
+      "solid": {
+        "count": 2700,
+        "recall": 0.987037037037037
+      }
+    },
+    "review_rate": 0.7625,
+    "avg_flags_per_sheet": 4.1125,
+    "registration_failure_rate": 0.075,
+    "registration_quality_mean": 0.6282049999999999,
+    "registration_quality_min": 0.0471,
+    "latency_ms": {
+      "p50": 234.57710000002407,
+      "p95": 780.3620549999096,
+      "mean": 294.25673125001595,
+      "max": 873.8432999998622
+    },
+    "throughput_sheets_per_s": 3.398392946703223,
+    "engine_stage_ms_mean": {
+      "page": 65.44625,
+      "read": 41.96,
+      "register": 185.04375,
+      "total": 292.53875
+    },
+    "error_breakdown": {
+      "missed_fill": 143,
+      "wrong_option": 59,
+      "roll:missed_fill": 18,
+      "roll:wrong_option": 17,
+      "registration_failed": 6,
+      "false_fill": 5,
+      "roll:false_multiple": 3,
+      "set:missed_fill": 3,
+      "missed_multiple": 2
+    },
+    "error_breakdown_by_style": {
+      "missed_fill|partial": 43,
+      "missed_fill|heavy": 30,
+      "missed_fill|scribble": 29,
+      "missed_fill|overshoot": 26,
+      "wrong_option|heavy": 25,
+      "missed_fill|solid": 15,
+      "wrong_option|solid": 14,
+      "wrong_option|overshoot": 14,
+      "roll:missed_fill|partial": 9,
+      "roll:missed_fill|overshoot": 6,
+      "roll:wrong_option|overshoot": 6,
+      "roll:wrong_option|heavy": 5,
+      "roll:wrong_option|solid": 5,
+      "roll:false_multiple|heavy": 3,
+      "wrong_option|scribble": 3
+    }
+  },
+  "overall_note": "overall aggregates the synthetic tiers only; the real tier is reported separately",
+  "errors_sample": [
+    {
+      "tier": "clean",
+      "sample": "clean_0001",
+      "field": "q46",
+      "expected": "B",
+      "got": "",
+      "kind": "missed_fill",
+      "state": "blank",
+      "ambiguous": false,
+      "style": "partial",
+      "scores": {
+        "A": 0.0,
+        "B": 0.254,
+        "C": 0.0,
+        "D": 0.0
+      }
+    },
+    {
+      "tier": "clean",
+      "sample": "clean_0001",
+      "field": "roll_10",
+      "expected": "8",
+      "got": "",
+      "kind": "roll:missed_fill",
+      "state": "blank",
+      "style": "partial",
+      "scores": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.185,
+        "9": 0.0,
+        "0": 0.0
+      }
+    },
+    {
+      "tier": "hard",
+      "sample": "hard_0005",
+      "field": "q34",
+      "expected": "",
+      "got": "A",
+      "kind": "false_fill",
+      "state": "single",
+      "ambiguous": false,
+      "scores": {
+        "A": 0.579,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      }
+    },
+    {
+      "tier": "hard",
+      "sample": "hard_0000",
+      "field": "q4",
+      "expected": "B",
+      "got": "",
+      "kind": "missed_fill",
+      "state": "blank",
+      "ambiguous": false,
+      "style": "scribble",
+      "scores": {
+        "A": 0.0,
+        "B": 0.366,
+        "C": 0.0,
+        "D": 0.0
+      }
+    },
+    {
+      "tier": "hard",
+      "sample": "hard_0005",
+      "field": "q12",
+      "expected": "CD",
+      "got": "A",
+      "kind": "missed_multiple",
+      "state": "single",
+      "ambiguous": false,
+      "style": "partial",
+      "scores": {
+        "A": 0.505,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      }
+    },
+    {
+      "tier": "hard",
+      "sample": "hard_0004",
+      "field": "*",
+      "expected": "",
+      "got": "",
+      "kind": "registration_failed",
+      "error": "registration failed (quality 0.06)"
+    },
+    {
+      "tier": "hard",
+      "sample": "hard_0001",
+      "field": "roll_2",
+      "expected": "4",
+      "got": "",
+      "kind": "roll:missed_fill",
+      "state": "blank",
+      "style": "partial",
+      "scores": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.157,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "0": 0.0
+      }
+    },
+    {
+      "tier": "hard",
+      "sample": "hard_0005",
+      "field": "roll_4",
+      "expected": "4",
+      "got": "2",
+      "kind": "roll:wrong_option",
+      "state": "single",
+      "style": "solid",
+      "scores": {
+        "1": 0.0,
+        "2": 0.977,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "0": 0.0
+      }
+    },
+    {
+      "tier": "hard",
+      "sample": "hard_0005",
+      "field": "paper_set",
+      "expected": "B",
+      "got": "",
+      "kind": "set:missed_fill",
+      "state": "blank",
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      }
+    },
+    {
+      "tier": "hard",
+      "sample": "hard_0005",
+      "field": "q13",
+      "expected": "A",
+      "got": "D",
+      "kind": "wrong_option",
+      "state": "single",
+      "ambiguous": false,
+      "style": "heavy",
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.207,
+        "D": 1.0
+      }
+    },
+    {
+      "tier": "photo",
+      "sample": "photo_0010",
+      "field": "q7",
+      "expected": "",
+      "got": "C",
+      "kind": "false_fill",
+      "state": "single",
+      "ambiguous": false,
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.549,
+        "D": 0.0
+      }
+    },
+    {
+      "tier": "photo",
+      "sample": "photo_0000",
+      "field": "q58",
+      "expected": "D",
+      "got": "",
+      "kind": "missed_fill",
+      "state": "ambiguous",
+      "ambiguous": true,
+      "style": "partial",
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.339
+      }
+    },
+    {
+      "tier": "photo",
+      "sample": "photo_0010",
+      "field": "roll_3",
+      "expected": "8",
+      "got": "67",
+      "kind": "roll:false_multiple",
+      "state": "ambiguous",
+      "style": "heavy",
+      "scores": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.455,
+        "7": 0.549,
+        "8": 0.0,
+        "9": 0.0,
+        "0": 0.0
+      }
+    },
+    {
+      "tier": "photo",
+      "sample": "photo_0001",
+      "field": "roll_10",
+      "expected": "8",
+      "got": "",
+      "kind": "roll:missed_fill",
+      "state": "blank",
+      "style": "partial",
+      "scores": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.056,
+        "9": 0.0,
+        "0": 0.0
+      }
+    },
+    {
+      "tier": "photo",
+      "sample": "photo_0010",
+      "field": "roll_2",
+      "expected": "3",
+      "got": "1",
+      "kind": "roll:wrong_option",
+      "state": "single",
+      "style": "scribble",
+      "scores": {
+        "1": 0.855,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "0": 0.0
+      }
+    },
+    {
+      "tier": "photo",
+      "sample": "photo_0010",
+      "field": "paper_set",
+      "expected": "B",
+      "got": "",
+      "kind": "set:missed_fill",
+      "state": "blank",
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0
+      }
+    },
+    {
+      "tier": "photo",
+      "sample": "photo_0010",
+      "field": "q4",
+      "expected": "C",
+      "got": "A",
+      "kind": "wrong_option",
+      "state": "single",
+      "ambiguous": false,
+      "style": "heavy",
+      "scores": {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.0
+      }
+    },
+    {
+      "tier": "scan",
+      "sample": "scan_0001",
+      "field": "q16",
+      "expected": "C",
+      "got": "",
+      "kind": "missed_fill",
+      "state": "ambiguous",
+      "ambiguous": true,
+      "style": "scribble",
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.404,
+        "D": 0.0
+      }
+    },
+    {
+      "tier": "scan",
+      "sample": "scan_0001",
+      "field": "roll_10",
+      "expected": "8",
+      "got": "",
+      "kind": "roll:missed_fill",
+      "state": "blank",
+      "style": "partial",
+      "scores": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.016,
+        "9": 0.0,
+        "0": 0.0
+      }
+    },
+    {
+      "tier": "clean",
+      "sample": "clean_0001",
+      "field": "q78",
+      "expected": "D",
+      "got": "",
+      "kind": "missed_fill",
+      "state": "blank",
+      "ambiguous": false,
+      "style": "partial",
+      "scores": {
+        "A": 0.0,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.359
+      }
+    }
+  ],
+  "targets_check": [
+    {
+      "name": "clean question accuracy >= 99.9%",
+      "value": "99.688%",
+      "pass": false
+    },
+    {
+      "name": "scan question accuracy >= 99.5%",
+      "value": "99.188%",
+      "pass": false
+    },
+    {
+      "name": "photo question accuracy >= 98.0%",
+      "value": "95.562%",
+      "pass": false
+    },
+    {
+      "name": "latency p95 < 1500 ms",
+      "value": "780 ms",
+      "pass": true
+    }
+  ]
+}
